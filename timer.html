@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/timer.css">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo-pomodoro.png">
+    
+    <title>Timer - Time2Pom</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="assets/images/logo-pomodoro.png" class="logo">
+            <h1 class="main-title">Time2Pom.</h1>
+        </div>
+        <a class="go-back-btn" href="index.html">Voltar<span><img src="assets/images/arrow-back.png"></span></a>
+    </header>
+    <hr class="divider">
+    <main class="main-timer">
+
+        <ul class="select-timer">
+            <li class="select-botao active" data-tab-target="#timer-sessao" id="select-session-btn">Sessão</li>
+            <li class="select-botao" data-tab-target="#timer-descanso" id="select-retire-btn">Descanso</li>
+        </ul>
+    
+    
+        <div class="active" id="timer-sessao" data-tab-content>
+            <p class="timer-showing" id="timer-showing-session"></p>
+        </div>
+
+        <div id="timer-descanso" data-tab-content >
+            <p class="timer-showing" id="timer-showing-retire"></p>
+        </div>
+      
+
+        <div class="buttons">
+            <button class="timer-btn" id="start-btn">Iniciar</button>
+            <button class="timer-btn" id="restart-btn">Reiniciar</button>
+            <button class="timer-btn" id="stop-btn">Pausar</button>
+        </div>
+
+    </main>
+
+    <section class="task-manager">
+            <h1 class="task-manager-title">Gerenciador de tarefas</h1>
+            <hr class="divider">
+            <form class="add-task">
+                <input class='input-task' type="text" placeholder="Digite sua tarefa...">
+                <button class="add-task-btn" type="submit">Adicionar tarefa</button>
+            </form>
+
+        <div class="tasks-container">
+            <ul class="task-list">
+                <li class="task-item">
+                    <div class="task-left">
+                        <img src="assets/images/check-mark.png" class="checkmark-icon">
+                        Tarefa 1
+                    </div>
+                    <div class="task-right">
+                        <input type="checkbox" class="checkbox">
+                        <button class="delete-task-btn"><img src="assets/images/trash-icon.png" style="width: 20px"></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <script src="assets/scripts/tabs.js"></script>
+
+    <script type="module" src="assets/scripts/timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo-pomodoro.png">
+    <title>Time2Pom.</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="assets/images/logo-pomodoro.png" class="logo">
+            <h1 class="main-title">Time2Pom.</h1>
+        </div>
+
+        <p style="font-size: 24px" class="productivity">Aumente sua produtividade nos estudos.</p>
+
+        <div class="header-right" style="width: 200px">
+            <button class="info-btn">
+                <img src="assets/images/info-icon.png" class='info-icon' style="width: 50px">
+            </button>
+            <p>O Método</p>
+                <div class="hidden-info">
+                    <p style="font-size: 20px"> O que é?</p>
+                    <p>O método Pomodoro é uma técnica de gestão do tempo que ajuda a aumentar a produtividade e gerenciar interrupções.</p>
+                    <br>
+                    <p style="font-size: 20px">Como funciona?</p>
+                    <p>O método consiste em trabalhar em sessões de geralmente 25 minutos (chamadas de "pomodoros") com pequenos intervalos de descanso entre eles, seguidos por um período mais longo de descanso.</p>
+                </div>
+        </div>
+
+    </header>
+    <hr class="divider">
+
+    <main>
+        <div class="welcome">
+            <img src="assets/images/logo-pomodoro.png" alt="Logo Time2Pom" class="logo" style="width: 100px">
+            <p>Boas-vindas ao nosso timer Pomodoro.</p>
+        </div>
+        <form class="session-and-retire-time" action="timer.html">
+            <fieldset required>
+                <legend>Qual será o tempo de cada sessão?</legend>
+                <select id="session-time">
+                    <option value="10">10 minutos</option>
+                    <option value="20">20 minutos</option>
+                    <option value="25">25 minutos</option>
+                    <option value="30">30 minutos</option>
+                    <option value="35">35 minutos</option>
+                    <option value="45">45 minutos</option>
+                </select>
+            </fieldset>
+            <fieldset required>
+                <legend>E o tempo de descanso?</legend>
+                <select id="retire-time">
+                    <option value="5">5 minutos</option>
+                    <option value="10">10 minutos</option>
+                    <option value="15">15 minutos</option>
+                </select>
+            </fieldset>
+            <button type="submit" class="go-btn">Ir<span><img src="assets/images/arrow-go.png"></span></button>      
+            
+        </form>
+    </main>
+
+    <script type="module" src="assets/scripts/session-values.js"></script>
+</body>
+
+</html>

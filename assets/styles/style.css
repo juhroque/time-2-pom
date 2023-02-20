@@ -1,0 +1,204 @@
+body {
+    font-family: 'Secular One', sans-serif;
+    background-color: #F5B36C
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    position: relative
+}
+
+.hidden-info {
+    position: absolute;
+    left: 0;
+    top: 65px;
+    background-color: aliceblue;
+    padding: 20px;
+    width: 120%;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.info-btn {
+    background-color: #F5B36C;
+    border: none;
+}
+
+.info-btn:hover {
+    cursor: pointer;
+}
+
+.header-right:hover > .hidden-info,
+.header-right > .hidden-info.show {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s
+}
+
+.header-right:active > .hidden {
+    visibility: visible;
+    
+}
+
+.main-title {
+    font-size: 24px
+}
+
+.divider {
+    width: 70%;
+    margin: auto;
+    border: 1px solid #F8D5B0;
+}
+
+.logo {
+    width: 68px
+}
+
+main {
+    background-color: #F8D5B0;
+    width: 560px;
+    height: 450px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.288);
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 24px 0px;
+    margin: auto
+}
+
+.welcome p {
+    font-size: 32px;
+    width: 400px
+}
+
+form {
+    width: 85%;
+    margin: auto
+}
+
+fieldset {
+    border: none
+}
+
+fieldset legend {
+    font-size: 24px;
+    text-align: left;
+}
+
+fieldset select {
+    background-color: #F5B36C;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Secular One', sans-serif;
+    color: white;
+    font-size: 24px
+}
+
+select option {
+    font-size: 16px;
+    color: white;
+}
+
+.go-btn {
+    width: 190px;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 15px;
+    border: none;
+    background-color: #DE8957;
+    font-family: 'Secular One', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px auto;
+    
+}
+
+.go-btn:hover {
+    background-color: #b46e46;
+    transition: 1s;
+    cursor: pointer;
+}
+
+@media (max-width: 920px) {
+
+    .productivity {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    body {
+        width: auto;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    main {
+        width: 70%;
+        height: 360px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+    
+    .welcome {
+        justify-content: center;
+        padding: 10px;
+    }
+    .welcome p {
+        font-size: 15px;
+        width: 60%;
+    }
+
+    fieldset legend {
+        font-size: 15px;
+    }
+
+    fieldset select {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    select option {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .go-btn {
+        width: 50%;
+        font-size: 1em;
+    }
+
+
+}
